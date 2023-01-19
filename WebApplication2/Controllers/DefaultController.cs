@@ -13,7 +13,7 @@ namespace WebApplication1.Controllers
 {
     public class DefaultController : ApiController
     {
-       
+
         // GET: api/Default
         public List<RecipesDTO> Get()
         {
@@ -147,12 +147,12 @@ namespace WebApplication1.Controllers
             {
                 return HttpStatusCode.BadRequest;
             }
-            
+
 
 
         }
 
-     
+
 
 
 
@@ -174,25 +174,25 @@ namespace WebApplication1.Controllers
                     {
                         ingtlist[i].Recipes.Remove(rectodel);
                     }
-                
-                    
+
+
                 }
 
 
-                
 
 
-              
-                    db.Recipes.Remove(rectodel);
-                    db.SaveChanges();
+
+
+                db.Recipes.Remove(rectodel);
+                db.SaveChanges();
                 return HttpStatusCode.OK;
-                
-         
+
+
 
             }
             catch
             {
-                
+
                 return HttpStatusCode.BadRequest;
             }
 
